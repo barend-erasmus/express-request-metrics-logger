@@ -1,0 +1,33 @@
+{
+  "name": "express-request-metrics-logger",
+  "version": "0.0.6",
+  "description": "",
+  "main": "./src/index.js",
+  "typings": "./src/index",
+  "scripts": {
+    "prepare": "tsc",
+    "test": "tsc & mocha ./src/**/*.test.js",
+    "coverage": "tsc & istanbul cover node_modules/mocha/bin/_mocha --root ./src ./src/**/*.test.js",
+    "lint": "tslint ./src/**/*.ts --exclude ./src/**/*.d.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/barend-erasmus/express-request-metrics-logger.git"
+  },
+  "author": "Barend Erasmus",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/barend-erasmus/express-request-metrics-logger/issues"
+  },
+  "homepage": "https://github.com/barend-erasmus/express-request-metrics-logger#readme",
+  "dependencies": {
+    "express": "^4.16.2",
+    "on-headers": "^1.0.1",
+    "statsd-client": "^0.4.0",
+    "winston": "^2.4.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.0.37",
+    "@types/winston": "^2.3.6"
+  }
+}
